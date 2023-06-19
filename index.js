@@ -13,6 +13,13 @@ app.use(cors())
 app.use(express.json());
 
 app.use('/api/productos', require('./routes/producto'));
+
+app.use('/api/vuelo', require('./routes/vuelo'));
+app.use('/api/avion', require('./routes/avion'));
+app.use('/api/piloto', require('./routes/piloto'));
+app.use('/api/tripulacion', require('./routes/tripulacion'));
+
+
 app.use('/api/login', require('./routes/usuario'));
 app.use('/api/create-user', require('./routes/usuario'));
 

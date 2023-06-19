@@ -1,27 +1,13 @@
 const mongoose = require('mongoose');
-
-const AvionSchema = mongoose.Schema({
     
-    producto: {
-        type: String,
-        require: true
+const avionSchema = new mongoose.Schema({
+    codigo: {
+      type: Integer,
+      required: true
     },
-    categoria: {
-        type: String,
-        require: true
-    },
-    ubicacion: {
-        type: String,
-        require: true
-    },
-    precio: {
-        type: Number,
-        require: true
-    },
-    fechaCreacion: {
-        type: Date,
-        default: Date.now()
+    tipo: {
+      type: String,
+      required: true
     }
-});
-
-module.exports = mongoose.model('Producto', ProductoSchema)
+  });
+module.exports = mongoose.model('Avion', avionSchema)
