@@ -18,12 +18,15 @@ const vueloSchema = new mongoose.Schema({
         required: true
     },
     avion: {
-        type: mongoose.Types.ObjectId,
-        ref: "Aviones"
+        type: String,
+        ref: "Aviones",
+        required: true
     },
     piloto: {
-        type: mongoose.Types.ObjectId,
-        ref: "Piloto"
-    }
+        type: String,
+        ref: "Piloto",
+        require: true
+      }
   });
+
 module.exports = mongoose.model('Vuelo', vueloSchema)

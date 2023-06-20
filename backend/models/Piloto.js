@@ -10,7 +10,7 @@ const pilotoSchema = new mongoose.Schema({
       required: true
     },
     hvuelo: {
-        type: Number,
+        type: String,
         require: true
     }
   });

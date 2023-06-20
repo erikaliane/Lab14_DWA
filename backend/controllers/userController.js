@@ -4,12 +4,9 @@ const User = require("../models/User");
 const config = require('../config/global');
 
 exports.crearUsuario = async (req, res) => {
-    //const { username, email, password } = req.body;
-    //console.log(username, email, password)
-    //console.log(user)
-
+ 
     try {
-        
+
         const { username, email, password } = req.body;
         const user = new User(
             {
@@ -19,7 +16,6 @@ exports.crearUsuario = async (req, res) => {
             } 
          );
 
-        
         user.password = await user.encryptPassword(user.password)
         await user.save();
 
