@@ -1,0 +1,63 @@
+<app-navbar></app-navbar>
+<section class="content">
+   <div class="table-responsive">
+    <div class="view-header">
+        <div class="header-icon">
+            <i class="pe page-header-icon pe-7s-note2"></i>
+        </div>
+        <div class="header-title">
+            <h3>Vuelos</h3>
+            <small>
+                Vuelos Registrados
+            </small>
+        </div>
+        <hr>
+    </div>
+    <br>
+    <table *ngIf="listVuelos.length > 0" class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Número de Vuelo
+                </th>
+                <th>
+                    Origen
+                </th>
+                <th>
+                    Destino
+                </th>
+                <th>
+                    Fecha
+                </th>
+                <th>
+                    Avión
+                </th>
+                <th>
+                    Piloto
+                </th>
+                <th>
+                    Acciones
+                </th>
+            </tr>
+        </thead>
+        <tbody id="datos">
+            <tr *ngFor="let vuelo of listVuelos">
+                <td>{{ vuelo.nvuelo }}</td>
+                <td>{{ vuelo.origen }}</td>
+                <td>{{ vuelo.destino }}</td>
+                <td>{{ vuelo.fecha }}</td>
+                <td>{{ vuelo.avion }}</td>
+                <td>{{ vuelo.piloto }}</td>
+                <td>
+                    <a style="font-size: 25px; text-decoration: none;" class="pe pe-7s-trash text-accent"></a>&nbsp;&nbsp;
+                    <a style="font-size: 25px; text-decoration: none;" class="pe pe-7s-pen text-accent"></a>
+                </td>
+            </tr>
+           
+
+        </tbody>       
+    </table>
+   </div>  
+       
+
+</section>

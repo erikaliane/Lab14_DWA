@@ -1,0 +1,50 @@
+<app-navbar></app-navbar>
+<section class="content">
+   <div class="table-responsive">
+    <div class="view-header">
+        <div class="header-icon">
+            <i class="pe page-header-icon pe-7s-note2"></i>
+        </div>
+        <div class="header-title">
+            <h3>Tripulaciones</h3>
+            <small>
+                Tripulaciones Registrados
+            </small>
+        </div>
+        <hr>
+    </div>
+    <br>
+    <table *ngIf="listTripulacion.length > 0" class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Codigo
+                </th>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Vuelo
+                </th>
+                <th>
+                    Acciones
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody id="datos">
+            <tr *ngFor="let tripulante of listTripulacion"> 
+                <td>{{ tripulante.codigo }}</td>
+                <td>{{ tripulante.nombre }}</td>
+                <td>{{ tripulante.vuelo }}</td>
+                <td>
+                    <a style="font-size: 25px; text-decoration: none;" class="pe pe-7s-trash text-accent"></a>&nbsp;&nbsp;
+                    <a style="font-size: 25px; text-decoration: none;" class="pe pe-7s-pen text-accent"></a>
+                </td>
+            </tr>
+        </tbody>       
+    </table>
+   </div>  
+       
+
+</section>
